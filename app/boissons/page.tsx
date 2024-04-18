@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { menu } from "@/app/data";
 
-export default function MenuPage() {
+export default function BoissonPage() {
     const [toggleImage, setToggleImage] = useState(false);
 
     const handleToggleImage = () => {
@@ -12,7 +12,7 @@ export default function MenuPage() {
     };
 
     return (
-        <div className="p-8 bg-gray-100 shadow-lg rounded-lg md:w-3/4 md:mx-auto mb-4 w-full">
+        <div className="p-8 bg-gray-100 shadow-lg rounded-lg md:w-3/4 md:mx-auto mb-20 w-full">
             <div className="mb-4 justify-between flex">
                 <h1 className="text-3xl font-bold">Menu du restaurant</h1>
                 <div>
@@ -32,22 +32,21 @@ export default function MenuPage() {
                     </label>
                 </div>
                 <div>
-                    <Link href="/boissons">
+                    <Link href="/menu">
                         <button 
                             className="text-white bg-black py-2 px-4 rounded-2xl hover:bg-gray-900 hover:scale-105 transition-transform duration-300"
                         >
-                            Boissons
+                            Menu
                         </button>
                     </Link>
                 </div>
             </div>
             {toggleImage ? (
                 <>
-                    {[["Entrées", "entrees"], ["Plats principaux", "plats"], ["Desserts", "desserts"]].map((v, i) => (
                         <div className="mb-6">
-                            <h2 className="text-xl font-bold mb-2">{v[0]}</h2>
+                            <h2 className="text-xl font-bold mb-2">Boissons</h2>
                             <div className="flex flex-wrap justify-center">
-                                {menu[v[1]].map((v, i) => (
+                                {menu["boissons"].map((v, i) => (
                                     <div key={v.id} className="max-w-sm rounded overflow-hidden shadow-lg mx-2 mb-4">
                                         <div className="flex justify-center items-center">
                                             <Image 
@@ -66,33 +65,12 @@ export default function MenuPage() {
                                 ))}
                             </div>
                         </div>
-                    ))}
                 </>
             ) : (
                 <>
                     <div className="mb-6">
-                        <h2 className="text-xl font-bold mb-2">Entrées</h2>
-                        {menu["entrees"].map((v, i) => (
-                            <div key={v.id} className="flex justify-between items-center">
-                                <p className="text-gray-700 mr-4">{v.nom}</p>
-                                <div className="flex-grow border-b border-gray-300"></div>
-                                <p className="text-gray-700 ml-4">{v.prix} €</p>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="mb-6">
-                        <h2 className="text-xl font-bold mb-2">Plats principaux</h2>
-                        {menu["plats"].map((v, i) => (
-                            <div key={v.id} className="flex justify-between items-center">
-                                <p className="text-gray-700 mr-4">{v.nom}</p>
-                                <div className="flex-grow border-b border-gray-300"></div>
-                                <p className="text-gray-700 ml-4">{v.prix} €</p>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="mb-6">
-                        <h2 className="text-xl font-bold mb-2">Desserts</h2>
-                        {menu["desserts"].map((v, i) => (
+                        <h2 className="text-xl font-bold mb-2">Boissons</h2>
+                        {menu["boissons"].map((v, i) => (
                             <div key={v.id} className="flex justify-between items-center">
                                 <p className="text-gray-700 mr-4">{v.nom}</p>
                                 <div className="flex-grow border-b border-gray-300"></div>

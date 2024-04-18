@@ -22,7 +22,7 @@ export const menu = {
             "id": "e189ccd8-edf3-4070-a0b2-79bb6fa0f7d3",
             "nom": "Croquettes de crevettes maison",
             "prix": "7.50",
-            "image": "croquette_saumons.jpg"
+            "image": "croquette_crevettes.jpg"
         },
         {
             "id": "e6d6952f-f7da-4f20-92ae-4188a2651837",
@@ -72,7 +72,7 @@ export const menu = {
         },
         {
             "id": "80f0fd40-77d8-432b-ba58-232f240a347d",
-            "nom": "Vin rouge Merlot, Domain de la Vallée (bouteille)",
+            "nom": "Vin rouge Merlot, Domaine de la Vallée (bouteille)",
             "prix": "25.00",
             "image": "vin_rouge.jpg"
         },
@@ -92,7 +92,7 @@ export const menu = {
             "id": "6d0e9390-b42b-4390-8462-85f25ffd9a45",
             "nom": "Thé glacé à la pêche et à la menthe",
             "prix": "4.50",
-            "image": "the_glace.jpg"
+            "image": "the_glace.jpeg"
         }
     ],
     "desserts": [
