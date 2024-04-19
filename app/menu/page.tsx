@@ -47,6 +47,7 @@ export default function MenuPage() {
                         <div className="mb-6">
                             <h2 className="text-xl font-bold mb-2">{v[0]}</h2>
                             <div className="flex flex-wrap justify-center">
+                                {/* Une erreur est généré par visual studio code car il ne connait pas le type de v[1] */}
                                 {menu[v[1]].map((v, i) => (
                                     <div key={v.id} className="max-w-sm rounded overflow-hidden shadow-lg mx-2 mb-4">
                                         <div className="flex justify-center items-center">
