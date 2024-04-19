@@ -22,7 +22,7 @@ export default function Carrousel({images} : { images: Array<string>}) {
     }, []);
 
     return (
-        <div className="w-3/4 bg-white mb-8 rounded-xl">
+        <div className="w-3/4 bg-white mb-8 py-4 rounded-xl">
             {/* Carousel container */}
             <div className="w-full h-96 rounded-md overflow-hidden relative">
                 {/* Image container */}
